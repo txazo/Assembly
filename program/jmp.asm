@@ -3,7 +3,9 @@ global _main
 _main:
     mov eax, 1
     mov ebx, 2
-    ; 加法指令
+    ; 跳转指令
+    jmp f1
     add eax, ebx
 
+f1:
     ret
