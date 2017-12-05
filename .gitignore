@@ -1,6 +1,7 @@
 .DS_Store
 /.idea
 /cmake-build-debug
+/temp
 *.o
 *.s
 *.out
