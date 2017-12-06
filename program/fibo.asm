@@ -17,6 +17,7 @@ fibo:
     cmp     eax, 2
     je      fibo_end
 
+    ; 保存现场
     push    ebx
     push    ecx
     push    edx
@@ -37,6 +38,7 @@ fibo:
     mov     eax, ebx
     add     eax, ecx
 
+    ; 恢复现场
     pop edx
     pop ecx
     pop ebx
