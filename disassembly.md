@@ -13,5 +13,6 @@ $ sudo gdb ./test
 (gdb) stepi
 (gdb) info register ebx
 (gdb) disas
+(gdb) p/x *(unsigned int*)$esp
 (gdb) continue
 ```
