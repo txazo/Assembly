@@ -4,22 +4,16 @@ project(assembly)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES
-        program/a1.asm
-        program/a1.c
-        program/add.asm
-        program/call.asm
-        program/data.asm
-        program/fibo.asm
-        program/fibo.c
-        program/if.asm
-        program/if.c
-        program/jmp.asm
-        program/register.asm
-        program/ret.asm
-        program/stdout.asm
-        program/stdout.c
-        program/sub.asm
-        program/while.asm
-        program/while.c)
+        nasm/arithmetic.asm
+        nasm/arithmetic.c
+        nasm/fibo.asm
+        nasm/fibo.c
+        nasm/if.asm
+        nasm/if.c
+        nasm/main.asm
+        nasm/main.c
+        nasm/stdout.c
+        nasm/while.asm
+        nasm/while.c)
 
 add_executable(assembly ${SOURCE_FILES})

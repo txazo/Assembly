@@ -1,9 +1,36 @@
 #!/bin/sh
 
-tempPath="./temp"
-program=$1
+name=$1
+path="./nasm/"${name}
+tempCPath="./temp/c/"${name}
+tempAsmPath="./temp/asm/"${name}
+color="\033[;36m"
 
-nasm -f macho32 ./program/${program}.asm -o ${tempPath}/${program}.o
-gcc -m32 ${tempPath}/${program}.o -o ${tempPath}/${program}
-${tempPath}/${program}
-echo $?
+function execC() {
+    if ! [ -f "${path}.c"  ]; then
+        return
+    fi
+
+    echo "${color}[C] gcc ${path}.c to ${tempCPath}"
+    gcc -m64 ${path}.c -o ${tempCPath}
+    echo "[C] exec ${tempCPath}"
+    ${tempCPath}
+    echo "[C] ret "$?
+}
+
+function execAsm() {
+    if ! [ -f "${path}.asm"  ]; then
+        return
+    fi
+
+    echo "${color}[ASM] nasm "${path}".asm to "${tempAsmPath}.o
+    nasm -f macho64 ${path}.asm -o ${tempAsmPath}.o
+    echo "[ASM] gcc "${tempAsmPath}".o to "${tempAsmPath}
+    gcc -m64 ${tempAsmPath}.o -o ${tempAsmPath}
+    echo "[ASM] exec "${tempAsmPath}
+    ${tempAsmPath}
+    echo "[ASM] ret "$?
+}
+
+execC
+execAsm
