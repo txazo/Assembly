@@ -16,6 +16,8 @@ set(SOURCE_FILES
         program/jmp.asm
         program/register.asm
         program/ret.asm
+        program/stdout.asm
+        program/stdout.c
         program/sub.asm
         program/while.asm
         program/while.c)

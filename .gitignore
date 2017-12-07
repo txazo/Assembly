@@ -2,6 +2,7 @@
 /.idea
 /cmake-build-debug
 /temp
-*.o
+*.i
 *.s
+*.o
 *.out
