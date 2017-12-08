@@ -1,6 +1,6 @@
 #### gcc
 
-```shell
+```
 // 预处理
 gcc -E test.c -o test.i
 // 编译
@@ -14,7 +14,7 @@ gcc stdout.o -o test
 #### nasm
 
 ```
-// nasm汇编
+// 汇编
 nasm -f macho64 test.asm -o test.o
 // 链接
 gcc -m64 test.o -o test
