@@ -15,6 +15,7 @@ set(SOURCE_FILES
         nasm/main.asm
         nasm/main.c
         nasm/stdout.c
+        nasm/switch.c
         nasm/while.asm
         nasm/while.c)
 

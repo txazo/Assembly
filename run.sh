@@ -12,7 +12,7 @@ function execC() {
     fi
 
     echo "${color}[C] gcc ${path}.c to ${tempCPath}.s"
-    gcc -m64 -O1 -S ${path}.c -o ${tempCPath}.s
+    gcc -m64 -Og -S ${path}.c -o ${tempCPath}.s
     echo "${color}[C] gcc ${tempCPath}.s to ${tempCPath}"
     gcc -m64 ${tempCPath}.s -o ${tempCPath}
     echo "[C] exec ${tempCPath}"
