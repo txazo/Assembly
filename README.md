@@ -34,3 +34,19 @@ rcx     ecx     cx      // 第4个参数
 r8      r8d     r8w     // 第5个参数
 r9      r9d     r9w     // 第6个参数
 ```
+
+#### 栈
+
+* FILO
+* 内存数组
+* 栈顶地址向下增长
+
+```
+pushq   S       // 入栈
+    rsp = rsp - 8
+    [rsp] = S
+
+popq    D       // 出栈
+    D = [rsp]
+    rsp = rsp +8
+```
