@@ -6,6 +6,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 set(SOURCE_FILES
         nasm/arithmetic.asm
         nasm/arithmetic.c
+        nasm/array.c
         nasm/condition-expr.asm
         nasm/condition-expr.c
         nasm/fibo.asm
