@@ -16,3 +16,12 @@ $ sudo gdb ./test
 (gdb) p/x *(unsigned int*)$esp
 (gdb) continue
 ```
+
+#### Mac反汇编
+
+```
+otool -tV main.o
+otool -dV main.o
+otool -l main.o
+nm -px main.o
+```
